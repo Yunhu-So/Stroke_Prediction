@@ -43,4 +43,18 @@ After Implementation, a patient's smoking status is represented:
    
 ## Prediction
 
-To run, 
+To predict the probability of a 40 year old male who has hypertension, has heart disease, is married, has a private job, lives at urban, has a glucose level of 170, has a bmi of 20, and smokes:
+
+Type this on the code
+```
+prediction = model.predict([[0, 0, 1, 0, 40, 1, 1, 1, 0, 0, 170, 20]])
+print(prediction)
+```
+First three numbers indicates the smoking status (it is now in the first three numbers due to one hot encoding).
+
+Starting from the fourth number, it is in the same ordering like the Attribute section
+
+To run, type 
+```
+$ python3 stroke_prediction.py
+```
